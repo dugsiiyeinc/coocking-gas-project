@@ -86,8 +86,8 @@ function switchAuthForm() {
     formTitle.textContent = "Sign in";
     username.style.display = "none";
     confirmPassword.style.display = "none";
-    user_location.style.display = "block";
-    user_number.style.display = "block";
+    user_location.style.display = "none";
+    user_number.style.display = "none";
     username.value = "";
     confirmPassword.value = "";
     email.value = "";
