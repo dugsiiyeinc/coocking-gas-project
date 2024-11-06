@@ -27,6 +27,16 @@ themeToggle.addEventListener("click", () => {
 
 window.addEventListener("load", function () {
   const theme = localStorage.getItem("theme");
+
+  const isServices = window.location.href.includes("services");
+  const isAuthenticated = JSON.parse(
+    this.localStorage.getItem("isAuthenticated")
+  );
+
+  if (!isAuthenticated && isServices) {
+    this.window.location.href = "login.html";
+  }
+
   if (theme) {
     document.body.classList.add(theme);
     if (theme === "dark-mode") {
