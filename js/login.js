@@ -96,7 +96,10 @@ function switchAuthForm() {
     confirmPassword.style.display = "none";
     user_location.style.display = "none";
     user_number.style.display = "none";
+<<<<<<< HEAD
     logout.style.display = "block";
+=======
+>>>>>>> 83547472093cccc7b299660887b360cb5206227d
     username.value = "";
     confirmPassword.value = "";
     email.value = "";
