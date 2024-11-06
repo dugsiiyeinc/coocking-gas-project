@@ -11,6 +11,7 @@ const user_number = document.querySelector("#user-number");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
+const logout = document.querySelector("#logout");
 
 let signIn = true;
 
@@ -39,6 +40,7 @@ authForm.addEventListener("submit", (e) => {
 
     if (existingUser) {
       localStorage.setItem("onlineUser", JSON.stringify(existingUser));
+      localStorage.setItem("isAuthenticated", true);
       window.location.href = "../html/index.html";
     } else {
       window.location.href = "../html/login.html";
@@ -69,6 +71,10 @@ authForm.addEventListener("submit", (e) => {
   }
 });
 
+logout.addEventListener("click", () => {
+  localStorage.setItem("isAuthenticated", false);
+});
+
 function switchAuthForm() {
   signIn = !signIn;
 
@@ -79,15 +85,21 @@ function switchAuthForm() {
     user_location.style.display = "block";
     user_number.style.display = "block";
     confirmPassword.style.display = "block";
+    logout.style.display = "none";
 
     authSwitch.innerHTML = `Already have an account? <a href="#" id="switchForm">Sign in </a>`;
   } else {
     authButton.textContent = "Sign in";
     formTitle.textContent = "Sign in";
     username.style.display = "none";
+
     confirmPassword.style.display = "none";
     user_location.style.display = "none";
     user_number.style.display = "none";
+<<<<<<< HEAD
+    logout.style.display = "block";
+=======
+>>>>>>> 83547472093cccc7b299660887b360cb5206227d
     username.value = "";
     confirmPassword.value = "";
     email.value = "";
