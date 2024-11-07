@@ -3,7 +3,7 @@ const authSwitch = document.querySelector("#authSwitch");
 const authButton = document.querySelector("#authButton");
 
 const switchForm = document.querySelector("#switchForm");
-
+// const logoutBtn = document.getElementById("logout");
 const formTitle = document.querySelector("#form-title");
 const username = document.querySelector("#username");
 const user_location = document.querySelector("#user-location");
@@ -11,7 +11,8 @@ const user_number = document.querySelector("#user-number");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
-const logout = document.querySelector("#logout");
+const logout = document.getElementById("logout");
+const login = document.getElementById("logins");
 
 let signIn = true;
 
@@ -42,6 +43,8 @@ authForm.addEventListener("submit", (e) => {
       localStorage.setItem("onlineUser", JSON.stringify(existingUser));
       localStorage.setItem("isAuthenticated", true);
       window.location.href = "../html/index.html";
+      logout.style.display = "block";
+      login.style.display = "none";
     } else {
       window.location.href = "../html/login.html";
       alert("Invalid Credentials");
@@ -96,10 +99,7 @@ function switchAuthForm() {
     confirmPassword.style.display = "none";
     user_location.style.display = "none";
     user_number.style.display = "none";
-<<<<<<< HEAD
     logout.style.display = "block";
-=======
->>>>>>> 83547472093cccc7b299660887b360cb5206227d
     username.value = "";
     confirmPassword.value = "";
     email.value = "";
