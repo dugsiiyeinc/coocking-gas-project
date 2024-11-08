@@ -144,4 +144,18 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     cartModal.style.display = "block";
   }
+
+  // Update the quantity of an item in the cart
+  window.updateCartItem = function (name, change) {
+    const item = cart.find((item) => item.name === name);
+    if (item) {
+      item.quantity += change;
+      if (item.quantity <= 0) {
+        cart = cart.filter((cartItem) => cartItem.name !== name);
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      showCartModal();
+    }
+  };
 });
