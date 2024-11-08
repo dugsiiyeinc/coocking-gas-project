@@ -65,4 +65,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     });
   }
+
+  // Update gas details (name, image, price) dynamically
+  function updateGasDetails(name, image, price) {
+    document.getElementById("selected-gas-name").textContent = name;
+    document.getElementById("selected-gas-image").src = image;
+    document.getElementById("selected-gas-price").textContent =
+      "$ " + price.toFixed(2);
+  }
 });
