@@ -105,6 +105,20 @@
     align-items: center;
     min-height: 80vh;
   }
+  /* Modal styling for review order */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1000;
+    width: 400px;
+  }
   /* add footer  */
   .footer {
     padding: 40px 20px;
