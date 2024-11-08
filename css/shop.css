@@ -89,6 +89,10 @@
     cursor: pointer;
     transition: background-color 0.2s;
   }
+  /* Hover effect for cart control buttons */
+.cart-controls button:hover {
+    background-color: #e64a19;
+  }
   /* add footer  */
   .footer {
     padding: 40px 20px;
