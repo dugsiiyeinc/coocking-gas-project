@@ -73,4 +73,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.getElementById("selected-gas-price").textContent =
       "$ " + price.toFixed(2);
   }
+
+  // Update the quantity input field
+  function updateQuantity(change) {
+    let quantity = parseInt(quantityInput.value);
+    quantity += change;
+    if (quantity < 1) quantity = 1;
+    quantityInput.value = quantity;
+  }
 });
