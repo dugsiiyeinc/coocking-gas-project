@@ -51,7 +51,31 @@
       </nav>
 
 
-
+      <main class="shop">
+        <div id="gas-cards-container" class="cards-container"></div>
+        <div class="gas-details-container">
+          <div
+            id="gas-details-container"
+            class="gas-details"
+            style="display: none"
+          >
+            <img id="selected-gas-image" src="" alt="Selected Gas" />
+            <h2 id="selected-gas-name">Gas</h2>
+            <p id="selected-gas-price">$ 0.00</p>
+            <div id="gas-options"></div>
+            <div class="cart-controls">
+              <button id="decrease-quantity">-</button>
+              <input type="number" id="quantity" value="1" min="1" />
+              <button id="increase-quantity">+</button>
+              <button id="add-to-cart" class="add-to-cart">Add to Cart</button>
+            </div>
+            <p id="terms">
+              Terms and Conditions<br />30-day money-back guarantee<br />Shipping:
+              2-3 Business Days
+            </p>
+          </div>
+        </div>
+      </main>
 
       <footer class="footer">
         <div class="footer-container">
