@@ -38,6 +38,35 @@
     color: #053120;
   }
 
+  /* Individual gas card styling */
+.gas-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  /* Hover effect for gas card */
+.gas-card:hover {
+    transform: scale(1.05);
+  }
+  /* Gas details styling */
+  .gas-details {
+    margin: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* add footer  */
   .footer {
     padding: 40px 20px;
     background-color: #333;
