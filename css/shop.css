@@ -149,6 +149,11 @@
   border: 1px solid #ddd;
   padding: 8px;
 }
+.modal-content th {
+    background-color: #ff5722;
+    color: white;
+    text-align: center;
+  }
   
 
   /* add footer  */
