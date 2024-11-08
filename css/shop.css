@@ -119,6 +119,10 @@
     z-index: 1000;
     width: 400px;
   }
+  body.dark-mode .modal {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
   /* add footer  */
   .footer {
     padding: 40px 20px;
