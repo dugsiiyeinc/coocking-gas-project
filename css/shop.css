@@ -137,6 +137,13 @@
   font-weight: 900;
   cursor: pointer;
 }
+/* Modal content table styling */
+.modal-content table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
 
   /* add footer  */
   .footer {
