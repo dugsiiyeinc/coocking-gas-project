@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "../html/Shop.html";
         await updateNavLinks();
       } else {
+        // alert("Invalid Credentials");
         return;
       }
     }
