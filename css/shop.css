@@ -1,5 +1,5 @@
   /* navbar */
-  /* .navbar {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,6 +123,58 @@
     background-color: #333;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   }
+  /* Modal header styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  /* added fonts to card */
+  .fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  cursor: pointer;
+}
+/* Modal content table styling */
+.modal-content table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  .modal-content table,
+.modal-content th,
+.modal-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.modal-content th {
+    background-color: #ff5722;
+    color: white;
+    text-align: center;
+  }
+  .modal-content td {
+    text-align: center;
+  }
+  /* Modal footer styling */
+.modal-footer {
+    text-align: center;
+  }
+  .modal-footer button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  /* Close button styling */
+.close {
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+
   /* add footer  */
   .footer {
     padding: 40px 20px;
