@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       updateQuantity(-1);
     });
 
+  // Event listener to add item to cart
+  document.getElementById("add-to-cart").addEventListener("click", function () {
+    addToCart();
+  });
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
