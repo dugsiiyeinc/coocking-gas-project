@@ -17,6 +17,26 @@ document.addEventListener("DOMContentLoaded", async function () {
   const cartIcon = document.getElementById("cart-icon");
   const cartItemsElement = document.getElementById("cart-items");
 
+  // Load the initial gas card
+  async function loadSingleGasCard() {
+    gasCardsContainer.innerHTML = "";
+    const option = gasOptionsData[0];
+    const card = document.createElement("div");
+    card.classList.add("gas-card");
+    card.innerHTML = `
+                    <img src="${option.image}" alt="${option.name}">
+                    <h3>${option.name}</h3>
+                    <p>Click to view cooking gases and their prices</p>
+                `;
+    card.addEventListener("click", function () {
+      gasDetailsContainer.style.display = "block";
+      gasCardsContainer.style.display = "none";
+      updateGasDetails(option.name, option.image, option.price);
+      loadGasOptions();
+    });
+    gasCardsContainer.appendChild(card);
+  }
+
   // Load gas options dynamically for selection
   function loadGasOptions() {
     gasOptionsContainer.innerHTML = "";
