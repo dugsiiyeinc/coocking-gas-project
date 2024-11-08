@@ -98,6 +98,13 @@
     width: 50px;
     text-align: center;
   }
+  /* Gas details container alignment */
+.gas-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
   /* add footer  */
   .footer {
     padding: 40px 20px;
