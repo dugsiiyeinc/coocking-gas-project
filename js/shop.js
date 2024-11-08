@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   document.getElementById("add-to-cart").addEventListener("click", function () {
     addToCart();
   });
+
+  // Event listener to show the cart modal
+  cartIcon.addEventListener("click", function () {
+    showCartModal();
+  });
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
