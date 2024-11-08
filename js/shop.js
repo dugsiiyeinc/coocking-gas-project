@@ -108,4 +108,40 @@ document.addEventListener("DOMContentLoaded", async function () {
     const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCountElement.textContent = totalCount;
   }
+  // Show the cart modal with cart items and order summary
+  function showCartModal() {
+    cartItemsElement.innerHTML = "";
+    let subtotal = 0;
+
+    cart.forEach((item) => {
+      subtotal += item.price * item.quantity;
+      const row = document.createElement("tr");
+      row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>
+                        <button onclick="updateCartItem('${
+                          item.name
+                        }', -1)">-</button>
+                        ${item.quantity}
+                        <button onclick="updateCartItem('${
+                          item.name
+                        }', 1)">+</button>
+                    </td>
+                    <td>$ ${(item.price * item.quantity).toFixed(2)}</td>
+                    <td><button onclick="removeCartItem('${
+                      item.name
+                    }')"><i class="fas fa-trash"></i></button></td>
+                `;
+      cartItemsElement.appendChild(row);
+    });
+
+    const taxes = subtotal * 0.05;
+    const total = subtotal + taxes;
+
+    document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+    document.getElementById("taxes").textContent = taxes.toFixed(2);
+    document.getElementById("total").textContent = total.toFixed(2);
+
+    cartModal.style.display = "block";
+  }
 });
