@@ -1,9 +1,6 @@
 const authSwitch = document.querySelector("#authSwitch");
-
 const authButton = document.querySelector("#authButton");
-
 const switchForm = document.querySelector("#switchForm");
-// const logoutBtn = document.getElementById("logout");
 const formTitle = document.querySelector("#form-title");
 const username = document.querySelector("#username");
 const user_location = document.querySelector("#user-location");
@@ -22,6 +19,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.target.id != "switchForm") return;
     switchAuthForm();
   });
+
+  // Check authentication status on load
+  await updateNavLinks();
+  await checkServicePageAccess();
 
   const authForm = document.querySelector("#authForm");
   authForm.addEventListener("submit", async (e) => {
@@ -73,7 +74,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "../html/Shop.html";
         await updateNavLinks();
       } else {
-        alert("Invalid Credentials");
         return;
       }
     }
@@ -136,6 +136,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       logout.style.display = "none";
       login.style.display = "block";
+    }
+  }
+
+  // Check if user is allowed to access the shop page
+  async function checkServicePageAccess() {
+    const isShopPage = window.location.href.includes("Shop.html");
+    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+    if (isShopPage && !isAuthenticated) {
+      window.location.href = "login.html";
     }
   }
 });
