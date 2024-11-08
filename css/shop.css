@@ -157,6 +157,10 @@
   .modal-content td {
     text-align: center;
   }
+  /* Modal footer styling */
+.modal-footer {
+    text-align: center;
+  }
   
 
   /* add footer  */
