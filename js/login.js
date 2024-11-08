@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   const authForm = document.querySelector("#authForm");
-
-  authForm.addEventListener("submit", (e) => {
+  authForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const user = {
@@ -36,26 +35,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       number: signIn ? undefined : user_number.value, // Add phone number for sign-up
     };
 
-    if (signIn) {
+    if (!signIn) {
       const users = JSON.parse(localStorage.getItem("users")) || [];
-      const existingUser = users.find(
-        (user) => user.email === email.value && user.password === password.value
-      );
-
-      if (existingUser) {
-        localStorage.setItem("onlineUser", JSON.stringify(existingUser));
-        localStorage.setItem("isAuthenticated", true);
-        window.location.href = "../html/index.html";
-        logout.style.display = "block";
-        login.style.display = "none";
-      } else {
-        window.location.href = "../html/login.html";
-        alert("Invalid Credentials");
-        return;
-      }
-    } else {
-      const users = JSON.parse(localStorage.getItem("users")) || [];
-
       const existingUser = users.find(
         (user) => user.username === username.value && user.email === email.value
       );
@@ -70,15 +51,32 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
       }
 
+      // Store new user details, including location and phone number
       users.push(user);
       localStorage.setItem("users", JSON.stringify(users));
-      alert("Registered successfuly");
+      alert("Registered successfully");
       switchAuthForm();
     }
-  });
 
-  logout.addEventListener("click", () => {
-    localStorage.setItem("isAuthenticated", false);
+    if (signIn) {
+      // Sign in logic: Check if the user exists in local storage and authenticate
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const existingUser = users.find(
+        (user) => user.email === email.value && user.password === password.value
+      );
+
+      if (existingUser) {
+        // Store the authenticated user and update authentication status
+        localStorage.setItem("onlineUser", JSON.stringify(existingUser));
+        localStorage.setItem("isAuthenticated", true);
+        alert("You have signed in successfully");
+        window.location.href = "../html/Shop.html";
+        await updateNavLinks();
+      } else {
+        alert("Invalid Credentials");
+        return;
+      }
+    }
   });
 
   // Switch between sign-in and sign-up forms
