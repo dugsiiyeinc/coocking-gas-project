@@ -20,6 +20,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Load a single gas card initially
   await loadSingleGasCard();
 
+  // Event listener to increase quantity
+  document
+    .getElementById("increase-quantity")
+    .addEventListener("click", function () {
+      updateQuantity(1);
+    });
+
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
