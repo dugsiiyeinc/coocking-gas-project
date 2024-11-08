@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   cartIcon.addEventListener("click", function () {
     showCartModal();
   });
+
+  // Event listener to close the cart modal
+  document.getElementById("close-modal").addEventListener("click", function () {
+    cartModal.style.display = "none";
+  });
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
