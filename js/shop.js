@@ -81,4 +81,25 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (quantity < 1) quantity = 1;
     quantityInput.value = quantity;
   }
+
+  // Add the selected item to the cart
+  function addToCart() {
+    const selectedOption = document.querySelector(
+      'input[name="gas-size"]:checked'
+    );
+    const name = selectedOption.dataset.name;
+    const price = parseFloat(selectedOption.value);
+    const quantity = parseInt(quantityInput.value);
+
+    const existingItem = cart.find((item) => item.name === name);
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      cart.push({ name, price, quantity });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    alert(quantity + " item(s) added to cart.");
+  }
 });
