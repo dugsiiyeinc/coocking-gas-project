@@ -111,4 +111,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       authSwitch.innerHTML = `New to Cooking Gas? <a href="#" id="switchForm">Register now</a>`;
     }
   }
+
+  // Update login/logout button visibility based on authentication status
+  async function updateNavLinks() {
+    // Check if the user is authenticated and update the visibility of login/logout buttons
+    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+    if (isAuthenticated) {
+      const onlineUser = JSON.parse(localStorage.getItem("onlineUser"));
+      if (onlineUser) {
+        // Display user information (location and number) if available
+        console.log(`Welcome back, ${onlineUser.username}`);
+        console.log(`Location: ${onlineUser.location}`);
+        console.log(`Number: ${onlineUser.number}`);
+      }
+      logout.style.display = "block";
+      login.style.display = "none";
+    } else {
+      logout.style.display = "none";
+      login.style.display = "block";
+    }
+  }
 });
