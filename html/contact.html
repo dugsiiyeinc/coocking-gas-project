@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/contact.css" />
     <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -15,6 +16,7 @@
   <body>
    
 
+   
     <nav class="navbar">
       <div class="brand-title">
         <h2><span>C</span>ooking Gas</h2>
@@ -28,15 +30,20 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+         
           <li><a href="login.html">Login</a></li>
           <li>
             <a class="nav-item">
               <button id="theme-toggle" class="theme-toggle">☾</button>
             </a>
           </li>
-          <li> <a><i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>
+          <li> <a> <div class="cart-icon" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
+          </div></li></a>
+          <!-- <span id="cart-count" class="cart-count">0</span> -->
         </ul>
       </div>
     </nav>
