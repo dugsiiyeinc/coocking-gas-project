@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   const cartIcon = document.getElementById("cart-icon");
   const cartItemsElement = document.getElementById("cart-items");
 
+  // Load a single gas card initially
+  await loadSingleGasCard();
+
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
