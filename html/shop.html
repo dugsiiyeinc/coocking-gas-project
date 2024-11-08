@@ -76,6 +76,34 @@
           </div>
         </div>
       </main>
+      <div id="cart-modal" class="modal">
+        <div class="modal-header">
+          <h2>Review Order</h2>
+          <span class="close" id="close-modal">&times;</span>
+        </div>
+        <div class="modal-content">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+          <div id="order-summary">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Taxes: $<span id="taxes">0.00</span></p>
+            <p>Total: $<span id="total">0.00</span></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="checkout">Process Checkout</button>
+        </div>
+      </div>
+  
 
       <footer class="footer">
         <div class="footer-container">
