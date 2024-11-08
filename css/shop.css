@@ -161,6 +161,13 @@
 .modal-footer {
     text-align: center;
   }
+  .modal-footer button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
   
 
   /* add footer  */
