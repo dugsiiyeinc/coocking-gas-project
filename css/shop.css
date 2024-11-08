@@ -154,6 +154,9 @@
     color: white;
     text-align: center;
   }
+  .modal-content td {
+    text-align: center;
+  }
   
 
   /* add footer  */
