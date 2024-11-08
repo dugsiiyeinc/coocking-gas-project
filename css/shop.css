@@ -168,6 +168,11 @@
     padding: 10px;
     cursor: pointer;
   }
+  /* Close button styling */
+.close {
+    cursor: pointer;
+    font-size: 1.5em;
+  }
   
 
   /* add footer  */
