@@ -143,6 +143,12 @@
     margin-bottom: 20px;
     border-collapse: collapse;
   }
+  .modal-content table,
+.modal-content th,
+.modal-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
   
 
   /* add footer  */
