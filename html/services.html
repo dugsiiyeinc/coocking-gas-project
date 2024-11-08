@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/services.css" />
     <link rel="stylesheet" href="../css/media.css" />
-    <link rel="stylesheet" href="../css/shop.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,6 +13,39 @@
     <title>Our services</title>
   </head>
   <body>
+    <!-- <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="../images/33.png" alt="Gas Management Logo" />
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="./services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="./login.html" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle">☾</button>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
     <nav class="navbar">
       <div class="brand-title">
         <h2><span>C</span>ooking Gas</h2>
@@ -25,22 +57,18 @@
       </a>
       <div class="navbar-links">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
-         
-          <li><a href="login.html">Login</a></li>
+          <li><a href="#login">Login</a></li>
           <li>
             <a class="nav-item">
               <button id="theme-toggle" class="theme-toggle">☾</button>
             </a>
           </li>
-          <li> <a> <div class="cart-icon" id="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count" class="cart-count">0</span>
-          </div></li></a>
-          <!-- <span id="cart-count" class="cart-count">0</span> -->
+          <li> <a><i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>
         </ul>
       </div>
     </nav>
@@ -61,60 +89,44 @@
       </div>
     </section>
 
-    <section class="about" id="about">
-      <h2>About Us</h2>
-      <div class="about-container">
-        <div class="about-row">
-          <div class="about-item">
-            <i class="fas fa-dollar-sign"></i>
-            <h3>Cost Friendly</h3>
-            <p>
-              We provide affordable gas solutions that fit your budget without
-              compromising on quality.
-            </p>
-          </div>
-          <div class="about-item">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Safe and Strong Cylinders</h3>
-            <p>
-              Our cylinders are built to last and undergo rigorous safety checks
-              to ensure your safety.
-            </p>
-          </div>
-          <div class="about-item">
-            <i class="fas fa-gas-pump"></i>
-            <h3>Quick Gas Connection</h3>
-            <p>
-              We offer fast and efficient gas connection services to keep your
-              household running smoothly.
-            </p>
-          </div>
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <img src="../images/2.png" alt="Service 1" />
+          <h3>Residential Gas Supply</h3>
+          <p>
+            Reliable gas supply for your home. Stay safe and comfortable with
+            our services.
+          </p>
+          <button class="buy-button">Buy Now</button>
         </div>
-        <div class="about-row">
-          <div class="about-item">
-            <i class="fas fa-star"></i>
-            <h3>Superior Quality</h3>
-            <p>
-              Our gas is of the highest quality, ensuring efficient energy for
-              all your needs.
-            </p>
-          </div>
-          <div class="about-item">
-            <i class="fas fa-lock"></i>
-            <h3>Strict Safety Adherence</h3>
-            <p>
-              We adhere strictly to safety regulations to provide a safe and
-              reliable gas supply.
-            </p>
-          </div>
-          <div class="about-item">
-            <i class="fas fa-truck"></i>
-            <h3>Most Preferred Supplier</h3>
-            <p>
-              We are trusted by many households and businesses as the most
-              preferred gas supplier.
-            </p>
-          </div>
+        <div class="service-card">
+          <img src="../images/11.png" alt="Service 2" />
+          <h3>Commercial Gas Solutions</h3>
+          <p>
+            Efficient gas supply for your business needs. Trust us for your
+            energy solutions.
+          </p>
+          <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="service-card">
+          <img src="../images/11.png" alt="Service 3" />
+          <h3>Gas Cylinder Refill</h3>
+          <p>
+            Quick and safe gas cylinder refills for your convenience and safety.
+            for our customers.
+          </p>
+          <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="service-card">
+          <img src="../images/11.png" alt="Service 4" />
+          <h3>Bulk Gas Supply</h3>
+          <p>
+            Reliable bulk gas supply for industrial needs. Get the energy your
+            operations need.
+          </p>
+          <button class="buy-button">Buy Now</button>
         </div>
       </div>
     </section>
