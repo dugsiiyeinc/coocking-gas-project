@@ -27,6 +27,13 @@ document.addEventListener("DOMContentLoaded", async function () {
       updateQuantity(1);
     });
 
+  // Event listener to decrease quantity
+  document
+    .getElementById("decrease-quantity")
+    .addEventListener("click", function () {
+      updateQuantity(-1);
+    });
+
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
