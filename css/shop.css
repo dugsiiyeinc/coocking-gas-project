@@ -130,6 +130,14 @@
     align-items: center;
     margin-bottom: 10px;
   }
+  /* added fonts to card */
+  .fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  cursor: pointer;
+}
+
   /* add footer  */
   .footer {
     padding: 40px 20px;
