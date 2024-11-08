@@ -93,6 +93,11 @@
 .cart-controls button:hover {
     background-color: #e64a19;
   }
+  /* Quantity input field styling */
+#quantity {
+    width: 50px;
+    text-align: center;
+  }
   /* add footer  */
   .footer {
     padding: 40px 20px;
