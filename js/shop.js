@@ -158,4 +158,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       showCartModal();
     }
   };
+
+  // Remove an item from the cart
+  window.removeCartItem = function (name) {
+    cart = cart.filter((item) => item.name !== name);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    showCartModal();
+  };
 });
