@@ -81,34 +81,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     localStorage.setItem("isAuthenticated", false);
   });
 
+  // Switch between sign-in and sign-up forms
   function switchAuthForm() {
     signIn = !signIn;
 
     if (!signIn) {
+      // Update form for sign-up
       authButton.textContent = "Sign up";
       formTitle.textContent = "Sign up";
       username.style.display = "block";
       user_location.style.display = "block";
       user_number.style.display = "block";
       confirmPassword.style.display = "block";
-      logout.style.display = "none";
 
       authSwitch.innerHTML = `Already have an account? <a href="#" id="switchForm">Sign in </a>`;
     } else {
+      // Update form for sign-in
       authButton.textContent = "Sign in";
       formTitle.textContent = "Sign in";
       username.style.display = "none";
-
       confirmPassword.style.display = "none";
       user_location.style.display = "none";
       user_number.style.display = "none";
-      logout.style.display = "block";
       username.value = "";
       confirmPassword.value = "";
       email.value = "";
       password.value = "";
 
-      authSwitch.innerHTML = `Already have an account? <a href="#" id="switchForm">Sign in </a>`;
+      authSwitch.innerHTML = `New to Cooking Gas? <a href="#" id="switchForm">Register now</a>`;
     }
   }
 });
