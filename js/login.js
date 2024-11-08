@@ -79,6 +79,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // Logout functionality
+  logout.addEventListener("click", async () => {
+    // Logout logic: Clear authentication status and redirect to login page
+    localStorage.setItem("isAuthenticated", false);
+    localStorage.removeItem("onlineUser");
+    await updateNavLinks();
+    window.location.href = "../html/login.html";
+  });
+
   // Switch between sign-in and sign-up forms
   function switchAuthForm() {
     signIn = !signIn;
