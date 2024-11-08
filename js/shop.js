@@ -48,6 +48,17 @@ document.addEventListener("DOMContentLoaded", async function () {
   document.getElementById("close-modal").addEventListener("click", function () {
     cartModal.style.display = "none";
   });
+
+  // Event listener for checkout button
+  document.getElementById("checkout").addEventListener("click", function () {
+    alert("You have successfully paid. Thanks!");
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    cartModal.style.display = "none";
+    window.location.href = "Shop.html";
+  });
+
   // Load the initial gas card
   async function loadSingleGasCard() {
     gasCardsContainer.innerHTML = "";
