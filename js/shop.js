@@ -102,4 +102,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     updateCartCount();
     alert(quantity + " item(s) added to cart.");
   }
+
+  // Update the cart count badge
+  function updateCartCount() {
+    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalCount;
+  }
 });
