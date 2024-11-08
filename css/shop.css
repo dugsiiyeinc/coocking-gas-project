@@ -130,6 +130,21 @@
     align-items: center;
     margin-bottom: 10px;
   }
+  /* added fonts to card */
+  .fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  cursor: pointer;
+}
+/* Modal content table styling */
+.modal-content table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+
   /* add footer  */
   .footer {
     padding: 40px 20px;
