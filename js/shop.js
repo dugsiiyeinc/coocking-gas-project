@@ -16,4 +16,33 @@ document.addEventListener("DOMContentLoaded", async function () {
   const cartModal = document.getElementById("cart-modal");
   const cartIcon = document.getElementById("cart-icon");
   const cartItemsElement = document.getElementById("cart-items");
+
+  // Load gas options dynamically for selection
+  function loadGasOptions() {
+    gasOptionsContainer.innerHTML = "";
+    gasOptionsData.forEach((option) => {
+      const label = document.createElement("label");
+      label.innerHTML = `<input type="radio" name="gas-size" value="${option.price}" data-name="${option.name}" data-image="${option.image}"> ${option.name} - $${option.price}`;
+      gasOptionsContainer.appendChild(label);
+    });
+    gasOptionsContainer.querySelector("input").checked = true;
+    updateGasDetails(
+      gasOptionsData[0].name,
+      gasOptionsData[0].image,
+      gasOptionsData[0].price
+    );
+
+    gasOptionsContainer.addEventListener("change", function (e) {
+      if (e.target && e.target.matches('input[name="gas-size"]')) {
+        const selectedOption = gasOptionsData.find(
+          (option) => option.price == e.target.value
+        );
+        updateGasDetails(
+          selectedOption.name,
+          selectedOption.image,
+          selectedOption.price
+        );
+      }
+    });
+  }
 });
