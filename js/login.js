@@ -10,6 +10,7 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
 const logout = document.getElementById("logout");
 const login = document.getElementById("logins");
+const buybutton = document.querySelectorAll(".buy-button");
 
 let signIn = true;
 
