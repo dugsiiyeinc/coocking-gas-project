@@ -48,15 +48,18 @@ document.addEventListener("DOMContentLoaded", async function () {
   document.getElementById("close-modal").addEventListener("click", function () {
     cartModal.style.display = "none";
   });
-
   // Event listener for checkout button
   document.getElementById("checkout").addEventListener("click", function () {
-    alert("You have successfully paid. Thanks!");
-    cart = [];
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
-    cartModal.style.display = "none";
-    window.location.href = "Shop.html";
+    if (cart.length === 0) {
+      alert("You have not selected any items to buy.");
+    } else {
+      alert("You have successfully paid. Thanks!");
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      cartModal.style.display = "none";
+      window.location.href = "Shop.html";
+    }
   });
 
   // Load the initial gas card
