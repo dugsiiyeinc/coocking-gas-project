@@ -15,37 +15,6 @@
     <title>Registration</title>
   </head>
   <body>
-    <!-- <nav class="navbar">
-      <div class="brand-title">
-        <h2><span>C</span>ooking Gas</h2>
-      </div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="Shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
-         
-          <li><a href="login.html">Login</a></li>
-          <li>
-            <a class="nav-item">
-              <button id="theme-toggle" class="theme-toggle">☾</button>
-            </a>
-          </li>
-          <li> <a> <div class="cart-icon" id="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count" class="cart-count">0</span>
-          </div></li></a>
-          <!-- <span id="cart-count" class="cart-count">0</span> -->
-        </ul>
-      </div>
-    </nav> -->
-
     <nav class="navbar">
       <div class="brand-title">
         <h2><span>C</span>ooking Gas</h2>
@@ -61,113 +30,129 @@
           <li><a href="about.html">About</a></li>
           <li><a href="Shop.html">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html" id="logins">Login</a></li>
-          <li><a style="cursor: pointer; display: none;" id="logout">Logout</a></li>
-        
           <li>
             <a class="nav-item">
               <button id="theme-toggle" class="theme-toggle">☾</button>
             </a>
           </li>
-          <li> <a> <div class="cart-icon" id="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count" class="cart-count">0</span>
-          </div></li></a>
+          <li>
+            <a>
+              <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count">0</span>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
-      <section class="hero">
-        <div class="hero-container">
-          <div class="hero-text">
-            <h1>Reliable Gas Management Solutions</h1>
-            <p>
-              We provide safe and efficient gas management services to ensure your
-              home and business never run out of energy. Trust us for all your gas
-              supply needs.
-            </p>
-            <button class="cta-button">Learn More</button>
-          </div>
-          <div class="hero-image">
-            <img src="../images/66.png" alt="Cooking Gas Cylinders" />
-          </div>
-        </div>
-      </section>
 
-
-      <div class="layout">
-        <div class="auth-container">
-          <h1 id="form-title">Sign In</h1>
-          <form id="authForm">
-            <input type="text" id="username" placeholder="Enter your username" style="display: none;"/>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              required
-            />
-            <input
-              type="password"
-              id="confirmPassword"
-              placeholder="Confirm your password"
-              style="display: none"
-            />
-            <input type="text" id="user-location" placeholder="Enter your location" style="display: none;"/>
-            <input type="number" id="user-number" placeholder="Enter your number" style="display: none;"/>
-            <button type="submit" id="authButton">Sign In</button>
-          </form>
-          <p id="authSwitch">
-            New to Coocking Gas? <a href="#" id="switchForm">Register now</a>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Reliable Gas Management Solutions</h1>
+          <p>
+            We provide safe and efficient gas management services to ensure your
+            home and business never run out of energy. Trust us for all your gas
+            supply needs.
           </p>
+          <button class="cta-button">Learn More</button>
+        </div>
+        <div class="hero-image">
+          <img src="../images/66.png" alt="Cooking Gas Cylinders" />
         </div>
       </div>
+    </section>
 
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#career">Careers</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="#help-center">Help Center</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Legal</h3>
-            <ul>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+    <div class="layout">
+      <div class="auth-container">
+        <h1 id="form-title">Sign In</h1>
+        <form id="authForm">
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            style="display: none"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            style="display: none"
+          />
+          <input
+            type="text"
+            id="user-location"
+            placeholder="Enter your location"
+            style="display: none"
+          />
+          <input
+            type="number"
+            id="user-number"
+            placeholder="Enter your number"
+            style="display: none"
+          />
+          <button type="submit" id="authButton">Sign In</button>
+        </form>
+        <p id="authSwitch">
+          New to Coocking Gas? <a href="#" id="switchForm">Register now</a>
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#career">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#help-center">Help Center</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="current-year"></span> Gas Management. All rights
-            reserved.
-          </p>
-        </div>
-      </footer>
-      <script src="../js/script.js"></script>
-      <script src="../js/login.js"></script>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Coocking Gas. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>
