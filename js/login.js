@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
         alert("Registered successfully");
-        switchAuthForm();
+        return switchAuthForm();
       }
 
       if (signIn) {
@@ -88,6 +88,8 @@ document.addEventListener("DOMContentLoaded", async () => {
           alert("You have signed in successfully");
           window.location.href = "../html/Shop.html";
           await updateNavLinks();
+        } else {
+          alert("Invalid Credentials");
         }
       }
     });
