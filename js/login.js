@@ -88,8 +88,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           alert("You have signed in successfully");
           window.location.href = "../html/Shop.html";
           await updateNavLinks();
-        } else {
-          alert("Invalid credentials");
         }
       }
     });
