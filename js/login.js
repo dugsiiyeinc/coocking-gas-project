@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           localStorage.setItem("onlineUser", JSON.stringify(existingUser));
           localStorage.setItem("isAuthenticated", true);
           alert("You have signed in successfully");
-          window.location.href = "../html/Shop.html";
+          window.location.href = "../html/shop.html";
           await updateNavLinks();
         } else {
           alert("Invalid Credentials");

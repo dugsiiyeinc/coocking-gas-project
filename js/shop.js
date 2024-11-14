@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartCount();
       cartModal.style.display = "none";
-      window.location.href = "Shop.html";
+      window.location.href = "shop.html";
     }
   });
 

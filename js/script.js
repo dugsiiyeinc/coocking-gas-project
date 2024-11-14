@@ -28,7 +28,7 @@ themeToggle.addEventListener("click", () => {
 window.addEventListener("load", function () {
   const theme = localStorage.getItem("theme");
 
-  const isServices = window.location.href.includes("Shop");
+  const isServices = window.location.href.includes("shop");
   const isAuthenticated = JSON.parse(
     this.localStorage.getItem("isAuthenticated")
   );
