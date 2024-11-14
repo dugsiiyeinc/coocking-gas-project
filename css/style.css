@@ -192,7 +192,8 @@ body.dark-mode .about-item i {
 .about-item h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-} */
+}
+*/
 
 /*  Our Service Section */
 .services {
@@ -265,7 +266,7 @@ body.dark-mode .buy-button {
 
 .buy-button:hover {
   background-color: #333;
-} 
+}
 /*  Contact us section */
 .contact {
   padding: 50px 20px;
@@ -338,9 +339,9 @@ body.dark-mode .contact-item i {
 body.dark-mode .contact-form {
   background-color: #333;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-} 
+}
 
- .contact-form input,
+.contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
@@ -364,7 +365,7 @@ body.dark-mode .contact-form button {
 
 .contact-form button:hover {
   background-color: #333;
-} 
+}
 
 /* footer */
 .footer {
