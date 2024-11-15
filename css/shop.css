@@ -183,6 +183,20 @@ body.dark-mode .shop {
     font-size: 1.5em;
   }
   
+  @media (max-width: 768px) {
+    .cart-count {
+      position: absolute;
+        left: 53%; 
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 568px) {
+  .cart-count {
+      left: 55%; 
+      bottom: 0px;
+  }
+}
 
 
   
